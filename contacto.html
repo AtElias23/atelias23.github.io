@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon/favicon-ta.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.cdnfonts.com/css/gabriola" rel="stylesheet" />
+    <title>Contacto</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="encabezado">
+        <a class="titulo__encabezado" href="index.html"><h1>Logo-Todo-Argento</h1></a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="contenido">
+        <h2 class="titulo">Contacto</h2>
+        <form class="formulario" id="formulario">
+          <!-- ---- Grupo nombre ---- -->
+
+          <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label">Nombre y Apellido</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="nombre" id="nombre" />
+              <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario__input-error">El Nombre y Apellido no debe contener numeros ni caracteres especiales</p>
+          </div>
+
+          <!-- ---- Grupo Telefono ---- -->
+
+          <div class="formulario__grupo" id="grupo__telefono">
+            <label for="telefono" class="formulario__label">Número de Teléfono</label>
+            <div class="formulario__grupo-input">
+              <input type="tel" class="formulario__input" name="telefono" id="telefono" />
+              <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario__input-error">El número no puede contener letras, puntos, comas, espacios ni caracteres especiales</p>
+          </div>
+
+          <!-- ---- Clima ---- -->
+
+          <div class="grupo__clima formulario__grupo">
+            <h3 class="formulario__label titulo__clima">Clima semanal</h3>
+            <div class="info__clima">
+              <template id="template__card">
+                <div class="grupo__clima-card">
+                  <p class="grupo__clima-dia"></p>
+                  <img class="grupo__clima-icono" />
+                  <p class="grupo__clima-temperatura-min"></p>
+                  <p class="grupo__clima-temperatura-max"></p>
+                </div>
+              </template>
+            </div>
+          </div>
+
+          <!-- ---- Grupo Fecha de reserva y hora ---- -->
+
+          <div class="formulario__grupo" id="grupo__fecha">
+            <label for="fecha" class="formulario__label">Fecha de reserva</label>
+            <div class="formulario__grupo-input">
+              <input type="date" class="formulario__input" name="fecha" id="fecha" min="2023-04-30" />
+              <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario__input-error">La fecha seleccionada no es valida.</p>
+          </div>
+
+          <div class="formulario__grupo" id="grupo__hora">
+            <fieldset>
+              <legend class="formulario__label">Hora de Reserva</legend>
+              <label for="radio__hora1" class="hora__opcion"> <input type="radio" class="hora" name="hora" id="radio__hora1" />19:00 </label>
+              <label for="radio__hora2" class="hora__opcion"> <input type="radio" class="hora" name="hora" id="radio__hora2" />20:00 </label>
+              <label for="radio__hora3" class="hora__opcion"> <input type="radio" class="hora" name="hora" id="radio__hora3" />21:00 </label>
+              <label for="radio__hora4" class="hora__opcion"> <input type="radio" class="hora" name="hora" id="radio__hora4" />22:00 </label>
+              <label for="radio__hora5" class="hora__opcion"> <input type="radio" class="hora" name="hora" id="radio__hora5" />23:00 </label>
+              <label for="radio__hora6" class="hora__opcion"> <input type="radio" class="hora" name="hora" id="radio__hora6" />00:00 </label>
+            </fieldset>
+          </div>
+
+          <!-- ---- Grupo email ---- -->
+
+          <div class="formulario__grupo" id="grupo__email">
+            <label for="email" class="formulario__label">E-mail</label>
+            <div class="formulario__grupo-input">
+              <input type="email" class="formulario__input" name="email" id="email" placeholder="email@dominio.com" />
+              <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario__input-error">El email ingresado no es valido</p>
+          </div>
+
+          <!-- ---- Grupo mensaje ---- -->
+
+          <div class="formulario__grupo" id="grupo__mensaje">
+            <label for="mensaje" class="formulario__label">Notas de reserva</label>
+            <div class="formulario__grupo-input">
+              <textarea class="formulario__input-mensaje" name="mensaje" id="mensaje" cols="43" rows="10"></textarea>
+            </div>
+          </div>
+
+          <!-- ---- Grupo de terminos y condiciones ---- -->
+
+          <div class="formulario__grupo" id="grupo__terminos">
+            <label class="formulario__label">
+              <input class="formulario__checkbox" type="checkbox" name=.formulario__btn"terminos" id="terminos" /> Acepto los
+              <a href="/legal.html" target="_blank">Términos y Condiciones</a>
+            </label>
+          </div>
+
+          <div class="formulario__grupo formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fa-solid fa-triangle-exclamation"></i><strong> Error:</strong>Hay campos sin completar o son incorrectos</p>
+          </div>
+
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button class="formulario__btn" type="submit">Enviar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente</p>
+          </div>
+        </form>
+      </div>
+      <section id="alocalizacion" class="localizacion">
+        <div class="contenido1">
+          <h2 class="titulo">¿Donde Estamos?</h2>
+          <iframe
+            class="ubicacion1"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168881864!2d-58.384145324813225!3d-34.60373445749814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1681608004893!5m2!1ses-419!2sar"
+            width="200"
+            height="200"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie__de__pagina">
+      <div class="contenido">
+        <img class="logo__footer" src="img/logo-blanco-centrado.png" alt="imagen-logo-blnaco" />
+
+        <div class="aviso__legal">
+          <ul class="aviso__lista">
+            <li class="aviso__item">© Copyright 2023.</li>
+            <li class="aviso__item">Todos los derechos reservados.</li>
+            <li class="aviso__item">
+              <a href="/legal.html" target="_blank">Política de privacidad y aviso legal</a>
+            </li>
+            <li class="aviso__item">
+              <a href="/legal.html" target="_blank">Tratamiento de datos personales</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contacto__footer">
+          <h2>Contacto</h2>
+          <a href="">info@todo_argento.com</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/4197db9fc0.js" crossorigin="anonymous"></script>
+    <script src="js/tiempo.js"></script>
+    <script src="js/formulario.js"></script>
+  </body>
+</html>

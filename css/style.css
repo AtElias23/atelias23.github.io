@@ -1,0 +1,776 @@
+.color1 {color: #ada976;}
+.color2 {color: #c7c298;}
+.color3 {color: #0a0700;}
+.color4 {color: #7c7772;}
+.color5 {color: #f8f8f8;}
+
+@import url('https://fonts.cdnfonts.com/css/gabriola');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f8f8;
+    font-family: 'Gabriola', sans-serif;
+    font-size: 16px;
+    background-image: url('/img/fondobody.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header__contenido{
+    width: 100%;
+    height: 100vh;
+    background-image: url('/img/fondo-nav.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.titulo__principal {
+    color: rgba(1, 1, 1, 0);
+    width: 24em;
+    height: 16em;
+    background-image: url('/img/logo-blanco.png');
+    background-size: cover;
+    background-position: center;
+    margin-right: 4rem;
+}
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5em;
+    text-align: right;
+    padding-right: 5rem;
+}
+
+.navegacion a {
+    color: #f8f8f8;
+    margin-top: 0.2em;
+}
+
+.navegacion a:hover {
+    color: #c7c298;
+}
+
+.contenido {
+    margin: 0em 5em;
+    padding: 3em 0em;
+    text-align: center;
+}
+
+.contenido1 {
+    margin: 0em 0em;
+    padding: 0em 0em;
+    text-align: center;
+}
+
+.contenido .titulo {
+    font-size: 6em;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contenido1 .titulo {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.reserva__descripcion {
+    font-size: 2em;
+    line-height: 1.5em;
+    color: #7c7772;
+}
+
+.reserva__avisos {
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reserva__items {
+    display: grid;
+    grid-template-areas: 
+        "icono"
+        "titulo"
+        "descripcion";
+    grid-template-columns: 4rem auto;
+    grid-template-rows: 4rem auto;
+    gap: 1em;
+    margin-right: 2em;
+    width: calc(33.33% - 2em);
+}
+
+.reserva__items:last-child {
+    margin-right: 0;
+}
+
+.icono__item {
+    grid-area: icono;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2; 
+    width: 100%;
+    height: 100%;
+}
+
+.titulo__item {
+    padding-top: 0.5em;
+    font-size: 2.2em;
+    color: #0a0700;
+    text-align: left;
+    grid-area: titulo;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3; 
+}
+
+.item__descripcion {
+    font-size: 2em;
+    text-align: left;
+    line-height: 1em;
+    color: #7c7772;
+    grid-area: descripcion;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;   
+    
+}
+
+.ubicacion {
+    box-sizing: border-box;
+    width: 70%;
+    border: 0.5em solid #ada976;
+    border-radius: 2em;
+}
+
+.ubicacion1 {
+    box-sizing: border-box;
+    width: 50%;
+    border: 0.5em solid #ada976;
+    border-radius: 2em;
+}
+
+.menu__destacado {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__opciones {
+    display: grid;
+    grid-template-areas: 
+        "imagen"
+        "cuerpo";
+    grid-template-columns: auto;
+    grid-template-rows: 400px auto;
+    row-gap: 2em;
+    width: calc(25% - 1.5em);
+}
+
+.menu__opciones__imagen {
+    box-sizing: border-box;
+    grid-area: imagen;
+    border: 0.3em solid #ada976;
+    border-radius: 1em;
+    width: 100%;  font-weight: bold;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu__opciones__cuerpo {
+    text-align: left;
+    grid-area: cuerpo;
+    display: grid;
+    grid-template-areas: 
+        "titulo"
+        "descripcion";
+    grid-template-columns: 100%;
+    grid-template-rows: 6em auto;
+    
+}
+
+.opciones__titulo {
+    grid-area: titulo;
+    color: #0a0700;
+    font-size: 2.2em;
+}
+
+.opciones__descripcion {
+    grid-area: descripcion;
+    color: #7c7772;
+    font-size: 2em;
+}
+
+.menu__pdf {
+    text-align: middle;
+    margin-top: 5rem;
+}
+
+.menu__pdf a {
+    color: #0a0700;
+    font-size: 2.2em;
+}
+
+.pie__de__pagina {
+    background-color: #0a0700;
+}
+
+.pie__de__pagina .contenido {
+    padding: 0;
+    text-align: left;
+    color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo__footer {
+    width: 300px;
+    height: 200px;
+}
+
+.aviso__legal {
+    width: 300px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.aviso__item a {
+    text-decoration: none;
+    color: #f8f8f8;
+}
+
+.aviso__item a:hover {
+    color: #ada976;
+}
+
+.contacto__footer {
+    width: 300px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+} 
+
+.contacto__footer a {
+    text-decoration: none;
+    color: #f8f8f8;
+}
+
+.contacto__footer a:hover {
+    color: #ada976;
+}
+
+/*--- Estilo encabezado faqs-contacto-legal ---*/
+
+.encabezado {
+    width: 100%;
+    height: 10%;
+    background:#0a0700;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo__encabezado {
+    color: rgba(1, 1, 1, 0);
+    width: 500px;
+    height: 100px;
+    background-image: url('/img/logo-blanco-lineal.png');
+    background-size: 100%;
+    background-position: center;
+}
+
+/*--- Estilo FAQs ---*/
+
+.cuestionario {
+    display: flex;
+    flex-direction: column;
+}
+
+.cuestionario__item {
+    text-align: left;
+    border-bottom: 2px solid #0a0700;
+}
+
+.pregunta {
+    font-size: 2.5em;
+    padding-top: 1.5rem;
+}
+
+.respuesta {
+    font-size: 2em;
+    line-height: 1.7rem;
+    color: #7c7772;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    list-style-type: decimal;
+}
+
+.olist {
+    padding-left: 3.5em;
+}
+
+/*--- Estilo contacto ---*/
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.formulario__grupo {
+    grid-column: 2 / 2;
+}
+
+.formulario__label {
+    display: block;
+    font-size: 1.8em;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.formulario__grupo-input {
+    position: relative;
+}
+
+.formulario__input {
+    box-sizing: border-box;
+    width: 100%;
+    background: #f1eded;
+    border: 3px solid transparent black;
+    border-radius: 3px;
+    height: 3em;
+    line-height: 3em;
+    padding: 0 2.5em 0 1em;
+    transition: .3s ease all;
+}
+
+.formulario__input:focus {
+    border: 3px solid #ada976;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.hora__opcion {
+    font-size: 1.4rem;
+}
+
+.formulario__input-mensaje {
+    box-sizing: border-box;
+    width: 100%;
+    background: #f1eded;
+    border: 3px solid transparent black;
+    border-radius: 3px;
+}
+
+.formulario__input-mensaje:focus {
+    border: 3px solid #ada976;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.formulario__input-error {
+    font-size: 1.2rem;
+    color: #bb2929;
+    margin-top: 1rem;
+    display: none;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
+
+.formulario__validacion-estado {
+    position: absolute;
+    right: 10px;
+    bottom: 12px;
+    z-index: 100;
+    font-size: 1rem;
+    opacity: 0;
+}
+
+.formulario__checkbox {
+    margin-right: 10px;
+}
+
+.formulario__mensaje {
+    font-size: 1.2rem;
+    height: auto;
+    line-height: 1rem;
+    background: #f66060;
+    padding: 0 1rem;
+    border-radius: 3px;
+    display: none;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+.formulario__grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__btn {
+    margin-top: 1rem;
+    height: 3rem;
+    line-height: 3rem;
+    width: 30%;
+    background: #0a0700;
+    color: #f8f8f8;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.1s ease all;
+}
+
+.formulario__btn:hover {
+    box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+}
+
+.formulario__mensaje-exito {
+    font-size: 1.5rem;
+    color: #119200;
+    margin-top: 1rem;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo {
+    display: block;
+}
+
+.grupo__clima {
+    display: flex;
+    flex-direction: column;
+}
+
+.info__clima {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.grupo__clima-card {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.grupo__clima-icono {
+    width: 40px;
+    height: 40px;
+}
+
+/*--- Estilos de validacion ---*/
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: #119200;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+    color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #bb2929;
+}
+
+/*--- Estilo Legal ---*/
+
+.legal .contenido {
+    text-align: left;
+}
+
+.idioma {
+    font-size: 3em;
+    margin-bottom: 0.5rem;
+    color: #7c7772;
+}
+
+.apartado {
+    font-size: 2.5em;
+    margin: 0.5rem;
+    color: #7c7772;
+}
+
+.legal .contenido p {
+    margin: 0 0 0.5em 1em;
+    font-size: 1.5em;
+    line-height: 1.5rem;
+    color: #7c7772;
+    
+}
+.fill {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+/*--- Media Queries ---*/
+
+/* Extra small devices (600px and down) */
+@media only screen and (max-width: 600px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    .titulo__encabezado {
+        width: 80%;
+        height: 40px;
+    }
+
+    .contenido {
+        margin: 0 0em;
+    }
+
+    .contenido .titulo {
+        margin-bottom: 1rem;
+    }
+
+    .pie__de__pagina .contenido {
+        flex-direction: column;
+    }
+
+    /* --- Pagina Principal ---*/
+
+    .header__contenido {
+        align-items: center;
+    }
+
+    .titulo__principal {
+        margin: 0;
+        background-image: url('/img/logo-blanco-centrado.png');
+        width: 100%;
+    }
+
+    .navegacion {
+        font-size: 4em;
+        text-align: center;
+        margin-top: 3rem;
+        padding: 0;
+    }
+
+    .reserva__avisos {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .reserva__items {
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }
+
+    .reserva__items:first-child {
+        margin: 0;
+    }
+
+    .titulo__item {
+     grid-row: 1 / 2;
+    grid-column: 2 / 3;  
+     padding-top: 0.7rem;
+    }
+
+    .menu__destacado {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 24px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .menu__opciones {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        margin-right: 1.5em;
+    }
+
+    .menu__pdf {
+        margin-top: 1rem;
+    }
+
+    /*--- Contacto ---*/
+
+    .formulario {
+        display: block;
+    }
+
+    .formulario__grupo {
+        width: 100%;
+    }
+
+}
+
+/* Small devices (600px and 768px) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .titulo__principal {
+        height: 22em;
+    }
+
+    .titulo__encabezado {
+        width: 80%;
+        height: 60px;
+    }
+
+    .contenido {
+        margin: 0 0em;
+    }
+
+    .contenido .titulo {
+        margin-bottom: 1rem;
+    }
+
+    .pie__de__pagina .contenido {
+        flex-direction: column;
+    }
+
+    /* --- Pagina Principal ---*/
+
+    .header__contenido {
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .titulo__principal {
+        margin: 0;
+        background-image: url('/img/logo-blanco-centrado.png');
+        width: 100%;
+    }
+
+    .navegacion {
+        font-size: 4em;
+        text-align: center;
+        margin-top: 3rem;
+        padding: 0;
+    }
+
+    .reserva__avisos {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .reserva__items {
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }
+
+    .reserva__items:first-child {
+        margin: 0;
+    }
+
+    .titulo__item {
+        padding-top: 0.7rem;
+    }
+
+    .menu__destacado {
+        flex-wrap: wrap;
+    }
+
+    .menu__opciones {
+        box-sizing: border-box;
+        width: 45%;
+        margin-right: 2em;
+    }
+
+    .menu__pdf {
+        margin-top: 1rem;
+    }
+
+    /*--- Contacto ---*/
+
+    .formulario {
+        grid-template-columns: 15% 70% 15%;
+        gap: unset;
+        row-gap: 1.5rem;
+    }
+}
+
+/* Medium devices (768px and 992px) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        font-size: 16px;
+    }
+
+    .titulo__encabezado {
+        width: 80%;
+        height: 60px;
+    }
+
+    .contenido {
+        margin: 0 1.5em;
+    }
+
+    .contenido .titulo {
+        margin-bottom: 1rem;
+    }
+
+    .pie__de__pagina .contenido {
+        flex-direction: column;
+    }
+
+    /* --- Pagina Principal ---*/   
+
+    .reserva__avisos {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .reserva__items {
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }
+
+    .reserva__items:first-child {
+        margin: 0;
+    }
+
+    .titulo__item {
+        padding-top: 0.7rem;
+    }
+
+    .menu__destacado {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .menu__opciones {
+        box-sizing: border-box;
+        width: 35%;
+        margin-right: 2em;
+    }
+
+    .menu__pdf {
+        margin-top: 1rem;
+    }
+
+    /*--- Contacto ---*/
+
+    .formulario {
+        grid-template-columns: 15% 70% 15%;
+        gap: unset;
+        row-gap: 1.5rem;
+    }
+}
+
